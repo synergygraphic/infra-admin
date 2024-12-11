@@ -2,6 +2,7 @@
 
 # VPC Configuration
 vpc_cidr            = "10.92.8.0/21"
+vpc_ipv6_cidr_block = "2a05:d018:1675:4700::/56"
 vpc_name            = "80-nop-ec2-vpc-01-lab_mvp_analitica-02"
 region              = "eu-west-1"
 environment         = "nop"
@@ -11,13 +12,14 @@ enable_ipv6         = true
 
 # Subnet Configuration
 subnet_config = {
-  lakehouse_az1       = { cidr_block = "10.92.8.0/24", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-lakehouse-01_az1-02", ipv6_cidr_block = "2a05:d018:1675:4700::/64" }
-  lakehouse_az2       = { cidr_block = "10.92.9.0/24", availability_zone = "eu-west-1b", name = "80-nop-ec2-sn-lakehouse-02_az2-02", ipv6_cidr_block = "2a05:d018:1675:4701::/64" }
-  processing_glue_az1 = { cidr_block = "10.92.10.0/24", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-processing-03_az1-02", ipv6_cidr_block = "2a05:d018:1675:4702::/64" }
-  processing_glue_az2 = { cidr_block = "10.92.11.0/24", availability_zone = "eu-west-1b", name = "80-nop-ec2-sn-processing-04_az2-02", ipv6_cidr_block = "2a05:d018:1675:4703::/64" }
-  governance_az1      = { cidr_block = "10.92.12.0/25", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-governance-05_az1-02", ipv6_cidr_block = "2a05:d018:1675:4704::/64" }
-  admin_az1           = { cidr_block = "10.92.12.128/25", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-admin-06_az1-02", ipv6_cidr_block = "2a05:d018:1675:4705::/64" }
+  lakehouse_az1       = { cidr_block = "10.92.8.0/24", availability_zone = "eu-west-1a", name = "lakehouse_az1", ipv6_cidr_block = "2a05:d018:1675:4700::/64" }
+  lakehouse_az2       = { cidr_block = "10.92.9.0/24", availability_zone = "eu-west-1b", name = "lakehouse_az2", ipv6_cidr_block = "2a05:d018:1675:4701::/64" }
+  processing_glue_az1 = { cidr_block = "10.92.10.0/24", availability_zone = "eu-west-1a", name = "processing_glue_az1", ipv6_cidr_block = "2a05:d018:1675:4702::/64" }
+  processing_glue_az2 = { cidr_block = "10.92.11.0/24", availability_zone = "eu-west-1b", name = "processing_glue_az2", ipv6_cidr_block = "2a05:d018:1675:4703::/64" }
+  governance_az1      = { cidr_block = "10.92.12.0/25", availability_zone = "eu-west-1a", name = "governance_az1", ipv6_cidr_block = "2a05:d018:1675:4704::/64" }
+  admin_az1           = { cidr_block = "10.92.12.128/25", availability_zone = "eu-west-1a", name = "admin_az1", ipv6_cidr_block = "2a05:d018:1675:4705::/64" }
 }
+
 
 # Route Table Mapping
 route_table_names = {
