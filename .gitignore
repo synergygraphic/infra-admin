@@ -1,0 +1,25 @@
+# Terraform directories and files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+*.tfvars.json
+tfplan.out
+
+# Terraform lock files
+*.lock.hcl
+.terraform.lock.hcl
+
+
+# Sensitive files (key pairs, certificates, etc.)
+*.pem
+*.key
+*.crt
+
+# IDE or Editor specific files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and other generated files
+*.log
