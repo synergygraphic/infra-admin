@@ -7,6 +7,7 @@ variable "vpc_cidr" {
   type        = string
 }
 
+
 variable "region" {
   description = "AWS region where resources will be created"
   type        = string
@@ -26,6 +27,7 @@ variable "environment" {
 variable "enable_ipv6" {
   description = "Enable IPv6 for the VPC"
   type        = bool
+  default     = false
 }
 
 variable "enable_dns_support" {
