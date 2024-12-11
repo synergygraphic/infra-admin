@@ -1,23 +1,23 @@
 # Root terraform.tfvars
 
 # VPC Configuration
-vpc_cidr            = "10.92.8.0/21"
-vpc_ipv6_cidr_block = "2a05:d018:1675:4700::/56"
-vpc_name            = "80-nop-ec2-vpc-01-lab_mvp_analitica-02"
-region              = "eu-west-1"
-environment         = "nop"
-enable_dns_support   = true
-enable_dns_hostnames = true
-enable_ipv6         = true
+vpc_cidr              = "10.92.8.0/21"
+enable_ipv6           = true
+vpc_name              = "80-nop-ec2-vpc-01-lab_mvp_analitica-02"
+region                = "eu-west-1"
+environment           = "nop"
+enable_dns_support    = true
+enable_dns_hostnames  = true
+
 
 # Subnet Configuration
 subnet_config = {
-  lakehouse_az1       = { cidr_block = "10.92.8.0/24", availability_zone = "eu-west-1a", name = "lakehouse_az1", ipv6_cidr_block = "2a05:d018:1675:4700::/64" }
-  lakehouse_az2       = { cidr_block = "10.92.9.0/24", availability_zone = "eu-west-1b", name = "lakehouse_az2", ipv6_cidr_block = "2a05:d018:1675:4701::/64" }
-  processing_glue_az1 = { cidr_block = "10.92.10.0/24", availability_zone = "eu-west-1a", name = "processing_glue_az1", ipv6_cidr_block = "2a05:d018:1675:4702::/64" }
-  processing_glue_az2 = { cidr_block = "10.92.11.0/24", availability_zone = "eu-west-1b", name = "processing_glue_az2", ipv6_cidr_block = "2a05:d018:1675:4703::/64" }
-  governance_az1      = { cidr_block = "10.92.12.0/25", availability_zone = "eu-west-1a", name = "governance_az1", ipv6_cidr_block = "2a05:d018:1675:4704::/64" }
-  admin_az1           = { cidr_block = "10.92.12.128/25", availability_zone = "eu-west-1a", name = "admin_az1", ipv6_cidr_block = "2a05:d018:1675:4705::/64" }
+  lakehouse_az1       = { cidr_block = "10.92.8.0/24", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-lakehouse_az1", ipv6_cidr_block = "2a05:d018:1675:4700::/64" }
+  lakehouse_az2       = { cidr_block = "10.92.9.0/24", availability_zone = "eu-west-1b", name = "80-nop-ec2-sn-lakehouse_az2", ipv6_cidr_block = "2a05:d018:1675:4701::/64" }
+  processing_glue_az1 = { cidr_block = "10.92.10.0/24", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-processing_glue_az1", ipv6_cidr_block = "2a05:d018:1675:4702::/64" }
+  processing_glue_az2 = { cidr_block = "10.92.11.0/24", availability_zone = "eu-west-1b", name = "80-nop-ec2-sn-processing_glue_az2", ipv6_cidr_block = "2a05:d018:1675:4703::/64" }
+  governance_az1      = { cidr_block = "10.92.12.0/25", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-governance_az1", ipv6_cidr_block = "2a05:d018:1675:4704::/64" }
+  admin_az1           = { cidr_block = "10.92.12.128/25", availability_zone = "eu-west-1a", name = "80-nop-ec2-sn-admin_az1", ipv6_cidr_block = "2a05:d018:1675:4705::/64" }
 }
 
 
