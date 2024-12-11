@@ -20,7 +20,7 @@ module "vpc" {
   environment           = var.environment
   enable_dns_support    = var.enable_dns_support
   enable_dns_hostnames  = var.enable_dns_hostnames
-  enable_ipv6           = var.enable_ipv6
+  vpc_ipv6_cidr_block   = var.vpc_ipv6_cidr_block  # Pass the IPv6 CIDR block here
 
   # Required tags and environment variables
   common_tags           = local.common_tags
